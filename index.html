@@ -1,0 +1,166 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+ 
+    <meta name="theme-color" content="DodgerBlue">
+    <link rel="icon" sizes="192x192" href="icon_player.png">
+	<title>Online URL Video Player </title>
+	<style>
+	input[type=text], select {
+    width: 75%;
+    max-width:400px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 20%;
+    background-color: DodgerBlue;
+    color: white;
+    max-width:100px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+h1 { color: DodgerBlue; font-family: 'Raleway',sans-serif; font-size: 42px; font-weight: 800; line-height: 72px; margin: 0 0 24px; text-align: center; text-transform: uppercase; }
+#player
+{
+    max-width:720px;
+    min-height:200px;
+}
+	</style>
+
+</head>
+<body>
+<center>
+<br>
+	<h1> SharingTube Online Player </h1>
+        <h1> web series title </h1>
+<a href="https://www.sharingtube.ml" title="hit counter"><img src="https://counter2.stat.ovh/private/freecounterstat.php?c=7u872kpykmgsyjljqj9c6r312mu6sk7h" border="0" title="hit counter" alt="hit counter"></a><br>
+
+
+<!-- Episode 1 Script  -->
+
+Episode 1 <input type="text" value="url" id="myInput1">
+
+<button onclick="myFunction1()" onmouseout="outFunc1()">
+  <span class="tooltiptext" id="myTooltip1">Copy</span>
+</button>
+<br>
+
+<!-- Episode 2 Script  -->
+
+Episode 2 <input type="text" value="url" id="myInput2">
+
+<button onclick="myFunction2()" onmouseout="outFunc2()">
+  <span class="tooltiptext" id="myTooltip2">Copy</span>
+</button>
+<br>
+
+<!-- Episode 3 Script  -->
+
+Episode 3 <input type="text" value="url" id="myInput3">
+
+<button onclick="myFunction3()" onmouseout="outFunc3()">
+  <span class="tooltiptext" id="myTooltip3">Copy</span>
+</button>
+<br>
+
+<!-- Play Button Script  -->
+
+
+	<input type="text" placeholder="Paste Url Here.." id="vid" name="vid"  autocomplete="off" maxlength="400" >
+    <button onclick="return play()">Play</button>
+	<br>
+	<video controls= "controls" id="player" tabindex="0" poster="thumb_2.png" autoplay="autoplay" loop="loop" src="#" width="100%" >
+		</video>
+	
+</center>
+
+
+<!-- Play Function Script  -->
+
+
+<script>
+function play()
+{
+	var qry=document.getElementById("vid").value;
+	if(qry==null)
+	{
+		alert("Enter URL First!")
+	}
+	else
+	{
+		document.getElementById("player").src=qry;
+	}
+}
+</script>
+
+<!-- Episode 1 Script  -->
+
+<script>
+function myFunction1() {
+  var copyText = document.getElementById("myInput1");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  
+  var tooltip = document.getElementById("myTooltip1");
+  tooltip.innerHTML = "Copied: " + copyText.value;
+}
+
+function outFunc1() {
+  var tooltip = document.getElementById("myTooltip1");
+  tooltip.innerHTML = "Copy";
+}
+</script>
+
+<!-- Episode 2 Script  -->
+
+<script>
+function myFunction2() {
+  var copyText = document.getElementById("myInput2");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  
+  var tooltip = document.getElementById("myTooltip2");
+  tooltip.innerHTML = "Copied: " + copyText.value;
+}
+
+function outFunc2() {
+  var tooltip = document.getElementById("myTooltip2");
+  tooltip.innerHTML = "Copy";
+}
+</script>
+
+<!-- Episode 3 Script  -->
+
+<script>
+function myFunction3() {
+  var copyText = document.getElementById("myInput3");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  
+  var tooltip = document.getElementById("myTooltip3");
+  tooltip.innerHTML = "Copied: " + copyText.value;
+}
+
+function outFunc3() {
+  var tooltip = document.getElementById("myTooltip3");
+  tooltip.innerHTML = "Copy";
+}
+</script>
+
+<br> <br>
+
+</body>
+</html>
